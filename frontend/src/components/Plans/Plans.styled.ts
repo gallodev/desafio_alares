@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from 'react-bootstrap/Button';
+import { Button } from 'react-bootstrap';
 
 export const Speed = styled.span`
     font-size: 30px;
@@ -29,7 +29,7 @@ export const ContractButton = styled(Button)`
 
 export const LargePrice = styled.span`
    font-size: 43px;
-   margin-top: -8px;
+   margin-top: -13px;
 `
 
 export const Period = styled.span`
@@ -38,4 +38,5 @@ export const Period = styled.span`
 
 export const ContainerPrice = styled.div`
     width: 120px;
+    margin-bottom: 20px;
 `

@@ -1,5 +1,6 @@
 import './App.css'
 import { Plans, Plan } from './components/Plans/Plans';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const App = () => {
   const plans: Plan[] = [

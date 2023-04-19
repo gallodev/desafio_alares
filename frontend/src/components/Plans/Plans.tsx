@@ -2,6 +2,8 @@ import * as C from './Plans.styled';
 import WifiIcon from '@mui/icons-material/Wifi';
 import GamesIcon from '@mui/icons-material/Games';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
+import { useState } from 'react';
+import { ModalComponent } from '../../Modal/ModalComponent';
 
 export interface Plan {
     speed: number;
@@ -16,6 +18,11 @@ export interface Plan {
 
 export const Plans: React.FC<Plan> = (data: Plan) => {
     const totalPrice = data.price.split(',');
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
             <li><strong><C.Speed color={data.betterPlan ? 'primary' : ''}>{data.speed}</C.Speed></strong></li>
@@ -29,11 +36,15 @@ export const Plans: React.FC<Plan> = (data: Plan) => {
                         <C.LargePrice>{totalPrice[0]}</C.LargePrice>
                         <span>,{totalPrice[1]}</span>                    
                         <C.Period>/ mês</C.Period>
+                        <span className="digital-account">Na conta digital</span>
                     </C.ContainerPrice>
             </li>
-            <li className="green-label">Na conta digital</li>
             <li>{`<< Consulte condições >>`}</li>
-            <C.ContractButton color={data.betterPlan ? 'primary' : ''}>Contrate já</C.ContractButton>
+            <C.ContractButton 
+                onClick={() => handleShow()}
+                color={data.betterPlan ? 'primary' : ''}                                
+            >Contrate já</C.ContractButton>
+            <ModalComponent show={show} handleClose={handleClose}/>
         </>
     )
 }

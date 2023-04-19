@@ -10,6 +10,7 @@ export const App = () => {
       games: false,
       movies: false,
       betterPlan: false,
+      price: '399,99',
     },
     {
       speed: 400,
@@ -17,7 +18,8 @@ export const App = () => {
       wifi: true,
       games: true,
       movies: false,
-      betterPlan: true
+      betterPlan: true,
+      price: '110,99',
     },
     {
       speed: 1,
@@ -25,7 +27,8 @@ export const App = () => {
       wifi: true,
       games: true,
       movies: true,
-      betterPlan: false
+      betterPlan: false,
+      price: '149,99'
     }
 ];
 
@@ -36,7 +39,15 @@ export const App = () => {
       <ul className="list-plans">
         {plans.map((item) => (
           <div className={`list-plans-container${item.betterPlan ? ' better-plan' : ''}`}>
-            <Plans key={item.speed} speed={item.speed} games={item.games} movies={item.movies} speed_label={item.speed_label} wifi={item.wifi} betterPlan={item.betterPlan} />
+            <Plans key={item.speed} 
+                   speed={item.speed} 
+                   games={item.games} 
+                   movies={item.movies} 
+                   speed_label={item.speed_label} 
+                   wifi={item.wifi}
+                   betterPlan={item.betterPlan}
+                   price={item.price}
+            />
           </div>
         ))}
       </ul>

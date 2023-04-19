@@ -23,6 +23,8 @@
     text-align: center;
     color: #295cf4;
     margin: 5px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .App .list-plans .list-plans-container svg {
@@ -36,4 +38,12 @@
 
 .App .list-plans .better-plan li{
         color: #FFF;
+}
+
+.green-label {
+    color: #00ffa5 !important;
+}
+
+.pull-left span {
+    float: left;
 }

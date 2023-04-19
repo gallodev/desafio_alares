@@ -1,0 +1,39 @@
+.App {
+    font-family: 'Lucida Sans';
+    display: flex;
+    justify-content: center;
+}
+
+.App .list-plans{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+}
+
+.App .list-plans .list-plans-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #295cf4;
+    padding: 25px 50px;
+    border-radius: 20px;
+}
+
+.App .list-plans .list-plans-container li{
+    text-align: center;
+    color: #295cf4;
+    margin: 5px 0;
+}
+
+.App .list-plans .list-plans-container svg {
+    color: #00ffa5;
+    margin-right: 10px;
+    float: left;
+}
+.App .list-plans .better-plan {
+    background-color: #295CF4;
+}
+
+.App .list-plans .better-plan li{
+        color: #FFF;
+}
